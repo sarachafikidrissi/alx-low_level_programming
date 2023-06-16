@@ -5,11 +5,11 @@
  */
 int main(void)
 {
-char c = '0';
-while (c <= '0')
+int n = 48;
+while (n <= 48)
 {
-	putchar('0');
-	c++;
+	putchar("%d", n);
+	n++;
 }
 putchar('\n');
 return (0);

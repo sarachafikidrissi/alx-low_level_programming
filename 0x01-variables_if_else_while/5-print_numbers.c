@@ -9,7 +9,9 @@ int a = 0;
 while (a < 10)
 {
 	printf("%d", a);
-	a++;
+	a++
+	
 }
 printf('\n');
+return (0);
 }

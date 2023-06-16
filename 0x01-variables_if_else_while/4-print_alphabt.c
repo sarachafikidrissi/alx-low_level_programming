@@ -6,9 +6,15 @@
 int main(void)
 {
 char c = 'a';
-while (c <= 'z' && !((c == 'e' || c == 'q')))
-
+while (c <= 'z')
 {
+	if (c == 'e' || c == 'q')
+	{
+	c++;
+	continue;
+	}
+
+
 	putchar(c);
 	c++;
 }

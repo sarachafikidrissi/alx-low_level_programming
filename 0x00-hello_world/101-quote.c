@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
- * main - A program that prints a line to the standard error
- * Return 1 (Success)
+ * main - Entry point
+ * Description: a progra that prints a line to the standard error
+ * Return: Description
  */
 int main(void)
 {

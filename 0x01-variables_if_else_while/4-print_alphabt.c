@@ -6,7 +6,8 @@
 int main(void)
 {
 char c = 'a';
-while (c <= 'z' !((c == 'e') && (c == 'q')))
+while ((c <= 'z') !((c == 'e') && (c == 'q')))
+
 {
 	putchar(c);
 	c++;

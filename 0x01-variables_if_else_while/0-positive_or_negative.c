@@ -3,7 +3,7 @@
 #include <time.h>
 /**
  * main - a program that prints thre different values using if statements
- * Return (0) Successful
+ * Return: description
  */
 int main(void)
 {
@@ -16,7 +16,7 @@ if (n > 0)
 }
 else if (n == 0)
 {
-	printf("%d is 0\n", n);
+	printf("%d is zero\n", n);
 }
 else if (n < 0)
 {

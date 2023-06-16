@@ -6,7 +6,7 @@
 int main(void)
 {
 int n;
-for (n = 0; n <= 9; n++)
+while ( n <= 9)
 {
 	printf("%d", n);
 	n++;

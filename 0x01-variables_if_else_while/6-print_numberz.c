@@ -9,7 +9,7 @@ char c = '0';
 while (c <= '0')
 {
 	putchar(c);
-	c++
+	c++;
 }
 putchar('\n');
 return (0);

@@ -12,7 +12,10 @@ while (n <= 57)
 	putchar(',');
 	putchar(' ');
 	n++;
+if (n == 57)
+{
+	putchar('\n');
 }
-putchar('\n');
+}
 return (0);
 }

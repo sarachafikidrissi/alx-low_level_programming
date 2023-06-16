@@ -5,12 +5,11 @@
  */
 int main(void)
 {
-int a = 0;
-while (a < 10)
+int n;
+for (n = 0; n <= 9; n++)
 {
 	printf("%d", a);
 	a++;
-	
 }
 printf('\n');
 return (0);

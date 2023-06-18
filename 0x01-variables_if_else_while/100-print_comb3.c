@@ -15,8 +15,10 @@ while (b <= '9')
 	putchar(a);
 	putchar(b);
 	if (a != '8')
+	{
 	putchar(',');
 	putchar(' ');
+	}
 b++;
 }
 a++;

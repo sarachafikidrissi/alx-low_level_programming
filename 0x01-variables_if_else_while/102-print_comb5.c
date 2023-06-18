@@ -20,6 +20,7 @@ while (a <= 98)
 		if (a != 98)
 		{
 			putchar(',');
+			putchar(' ');
 		}
 		b++;
 	}

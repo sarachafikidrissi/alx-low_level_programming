@@ -13,7 +13,7 @@ while (n <= 81)
 
 	while (count <= 9)
 	{
-		_putchar(n);
+		_putchar(n + '0');
 		if (count != 9)
 		{
 		_putchar(',');
@@ -22,6 +22,10 @@ while (n <= 81)
 		count++;
 	}
 	_putchar('\n');
+	if (count == 0)
+	{
+	n = 0;
+	}
 	n++;
 }
 }

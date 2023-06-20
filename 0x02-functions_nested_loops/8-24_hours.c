@@ -9,7 +9,7 @@ int a = 0;
 
 while (a <= 23)
 {
-int b = a + 1;
+int b = 0;
 while (b <= 59)
 {
 	_putchar(a / 10 + 48);

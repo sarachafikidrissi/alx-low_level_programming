@@ -1,8 +1,11 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
  * main - A program that prints a string using putchar only
  * Return: Always 0
  */
+int c;
+#include "main.h"
 int main(void)
 {
 	putchar('_');

@@ -1,18 +1,15 @@
 #include "main.h"
 /**
- * main - A program that prints alphabets in lowercase
+ * print_alphabet -  print all alphabets in lowercase
  * Return: 0
  */
-int main(void)
+void print_alphabet(void)
 {
 	char c = 'a';
-	while (c <='z')
+	while (c <= 'z')
 	{
 		_putchar('c');
 		c++;
 	}
 	_putchar('\n');
-	return (0);
 }
-
-

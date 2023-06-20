@@ -4,9 +4,8 @@
  *@n: the number that contains the last digit
  *Return: 0
  */
-int print_last_digit(int n)
+int print_last_digit(int n, m)
 {
-int m;
 m = n % 10;
 
 _putchar(m);

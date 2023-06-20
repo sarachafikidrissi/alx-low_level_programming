@@ -21,3 +21,4 @@ while (n <= 81)
 	_putchar('\n');
 	n++;
 }
+}

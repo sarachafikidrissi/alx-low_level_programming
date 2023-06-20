@@ -12,9 +12,11 @@ while (a <= 23)
 int b = a + 1;
 while (b <= 59)
 {
-	_putchar(a + 48);
+	_putchar(a / 10 + 48);
+	_putchar(a % 10 + 48);
 	_putchar(':');
-	_putchar(b + 48);
+	_putchar(b / 10 + 48);
+	_putchar(b % 10 + 48);
 	_putchar('\n');
 	b++;
 }

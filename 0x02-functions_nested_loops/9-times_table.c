@@ -12,7 +12,7 @@ while (x <= 9)
 	y = 0;
 	while (y <= 9)
 	{
-		z = x * y
+		z = x * y;
 		if (z > 9)
 		{
 		u = z % 10;

@@ -5,8 +5,8 @@
  */
 int _islower(int c)
 {
-char c;
-if (c >= '97' || c <= '122')
+char r;
+if (r >= '97' || r <= '122')
 {
 return (1);
 }

@@ -1,21 +1,18 @@
-#include <stdio.h>
-#include <unistd.h>
+#include "main.h"
 /**
- * main - A program that prints a string using putchar only
+ * main - A program that prints a string using _putchar only
  * Return: Always 0
  */
-int c;
-#include "main.h"
 int main(void)
 {
-	putchar('_');
-	putchar('p');
-	putchar('u');
-	putchar('t');
-	putchar('c');
-	putchar('h');
-	putchar('a');
-	putchar('r');
-	putchar('\n');
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 return (0);
 }

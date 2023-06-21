@@ -14,12 +14,12 @@ for (y = 0; x <= 9; y++)
 z = x * y;
 if (y == 9)
 {
-z = x * y
+z = x * y;
 if (y == 0)
 {
 _putchar(z + '0');
 }
-if (z < 10 && j != 0)
+if (z < 10 && y != 0)
 {
 _putchar(',');
 _putchar(' ');
@@ -30,8 +30,8 @@ else if (z >= 10)
 {
 _putchar(',');
 _putchar(' ');
-_putchar((k / 10) + '0');
-_putchar((k % 10) + '0');
+_putchar((z / 10) + '0');
+_putchar((z % 10) + '0');
 }
 }
 _putchar('\n');

@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Return : 0 is successful
+ * Description: print numbers from 1 to 100
+ * Return: 0 is successful
  */
 int main(void)
 {

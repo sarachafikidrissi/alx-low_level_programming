@@ -41,7 +41,7 @@ for (i = 0; i <= n; i++)
 			_putchar(result % 10 + 48);
 		}
 	}
-	_putchar('\n');
+_putchar('\n');
 }
 }
 }

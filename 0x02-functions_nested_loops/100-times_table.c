@@ -37,7 +37,7 @@ for (i = 0; i <= n; i++)
 			_putchar(',');
 			_putchar(' ');
 			_putchar(result / 100 + 48);
-			_putchar((result / 100) % 10 + 48);
+			_putchar((result / 10) % 10 + 48);
 			_putchar(result % 10 + 48);
 		}
 	}

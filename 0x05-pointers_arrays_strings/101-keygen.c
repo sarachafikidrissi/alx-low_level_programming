@@ -6,12 +6,20 @@
 
 int main(void)
 {
-	int length = 1;
+	int length;
+	scanf("%d", &length);
+	if (length <= 0)
+	{
+		return (1);
+	}
+
+	
 	int i = 0;
 	char*password= malloc(length + 1);
-
+	
 	char *digits = "0123456789";
        	int digits_length = strlen(digits);
+	
 	
 	char *lowers = "abcdefghijklmnopqrstuvwxyz";
 	int lowers_length = strlen(lowers);

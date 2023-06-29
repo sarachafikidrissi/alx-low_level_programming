@@ -6,7 +6,7 @@
  */
 int check_seperators(char c)
 {
-	int i =0;
+	int i = 0;
 	char seperators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
 		'"', '(', ')', '{', '}' };
 	for (; i < 13; i++)
@@ -24,6 +24,7 @@ int check_seperators(char c)
 char *cap_string(char *s)
 {
 	int i = 0;
+
 	while (s[i])
 	{
 		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))

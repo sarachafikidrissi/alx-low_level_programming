@@ -24,7 +24,6 @@ int check_seperators(char c)
 char *cap_string(char *s)
 {
 	int i = 0;
-ii
 	while (s[i])
 	{
 		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))

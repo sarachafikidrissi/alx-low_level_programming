@@ -1,34 +1,38 @@
 #include "main.h"
 /**
- * cap_string - a function that capitilize letters
- * @s: the string to be capitilize
- * Return: s
+ * check_seperators - Separators of words
+ * @c: an input character
+ * Return: 1 if seperator, 0 otherwise
+ */
+int check_seperators(char c)
+{
+	int i = 0;
+	char seperators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
+		'"', '(', ')', '{', '}' };
+	for (; i < 13; i++)
+	{
+		if (c == seperators[i])
+			return (1);
+	}
+	return (0);
+}
+/**
+ * cap_string - a function that capitalizes all words of a string.
+ * @s: An input string to capitalize letters
+ * Return: pointer to s
  */
 char *cap_string(char *s)
 {
 	int i = 0;
-
-	while (s[i] != '\0')
+ii
+	while (s[i])
 	{
-		if (!(s[i] >= 'a' && s[i] <= 'z'))
-			i++;
+		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
+			s[i] -= 32;
 
-		if (s[i - 1] == ' ' ||
-		s[i - 1] == '\t' ||
-		s[i - 1] == '\n' ||
-		s[i - 1] == ',' ||
-		s[i - 1] == ';' ||
-		s[i - 1] == '.' ||
-		s[i - 1] == '!' ||
-		s[i - 1] == '?' ||
-		s[i - 1] == '"' ||
-		s[i - 1] == '(' ||
-		s[i - 1] == ')' ||
-		s[i - 1] == '{' ||
-		s[i - 1] == '}' ||
-		i == 0)
-			s[i] = s[i] - 32;
+		if (check_seperators(s[i]) && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
+			s[i + 1] -= 32;
 		i++;
 	}
-return (s);
+	return (s);
 }

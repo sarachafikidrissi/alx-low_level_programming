@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stddef.h>
+#include <stdio.h>
 /**
  * _strstr - a function that lolcates a substring
  * @haystack: an input string to search in

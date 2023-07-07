@@ -1,6 +1,12 @@
-#include "main.h"
-int main(int argc, char *argv[])
-{
-	int i,j;
+#include <stdio.h>
 
-	for (j = 0; j<
+int main(int __attribute__ ((unused)) argc, char *argv[])
+{
+	int i = 0;
+
+	if (i == 0)
+	{
+		printf("%s\n", argv[i]);
+	}
+	return (0);
+}

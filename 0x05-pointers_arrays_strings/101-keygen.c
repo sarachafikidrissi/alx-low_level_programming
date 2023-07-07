@@ -6,15 +6,10 @@
 
 int main(void)
 {
-	int length;
-	scanf("%d", &length);
-	if (length <= 0)
-	{
-		return (1);
-	}
+	int length = strlen((char*)password);
 
 	
-	int i = 0;
+	int i=0;
 	char*password= malloc(length + 1);
 	
 	char *digits = "0123456789";
@@ -32,8 +27,10 @@ int main(void)
 
 	srand(time(NULL) * getpid());
 
+
 	for (i = 0; i < length; i++)
 	{
+		
 		int char_type = rand() % 4;
 
 		if (char_type == 0)

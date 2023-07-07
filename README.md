@@ -1,1 +1,1 @@
-hello world
+static libraries

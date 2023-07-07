@@ -8,13 +8,18 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int i = 0;
 	int mul = 1;
 
-	for (i = 1; i < argc; i++)
+	if (i == 0)
+		printf("Error\n");
+	else
 	{
-		mul = mul * atoi(argv[i]);
+		for (i = 1; i < argc; i++)
+		{
+			mul = mul * atoi(argv[i]);
+		}
+		printf("%d\n", mul);
 	}
-	printf("%d\n", mul);
 	return (0);
 }

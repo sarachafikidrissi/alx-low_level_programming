@@ -9,7 +9,7 @@ int main(void)
 	int length = strlen((char*)password);
 
 	
-	int i=0;
+	int i;
 	char*password= malloc(length + 1);
 	
 	char *digits = "0123456789";

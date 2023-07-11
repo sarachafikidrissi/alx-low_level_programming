@@ -7,24 +7,26 @@
  */
 char *_strdup(char *str)
 {
-	unsigned int len, i;
-	char *ptr;
-
-	if (str == NULL)
-		return (NULL);
+	unsigned int len = 0;
+	unsigned int i = 0;
+	char *s;
 
 	while (str[len] != '\0')
 	{
 		len++;
 	}
-	ptr = malloc((len + 1) * sizeof(char));
+	s = (char *) malloc((len + 1) * sizeof(char));
 
-	if (ptr == NULL)
-		return (NULL);
-
-	for (i = 0; i <= len ; i++)
+	while (str[i] != '\0')
 	{
-		ptr[i] = str[i];
+		s[i] = str[i];
+		i++;
+	}
+	s[i] = '\0';
+
+	if (str == NULL)
+	{
+		return (NULL);
 	}
 	return (s);
 }

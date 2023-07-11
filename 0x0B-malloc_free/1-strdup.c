@@ -26,10 +26,6 @@ char *_strdup(char *str)
 		i++;
 	}
 	s[i] = '\0';
-
-	if (s == NULL)
-	{
-		return (1);
-	}
+	
 	return (s);
 }

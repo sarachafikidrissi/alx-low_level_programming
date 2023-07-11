@@ -29,7 +29,7 @@ char *_strdup(char *str)
 
 	if (s == NULL)
 	{
-		return (NULL);
+		return (1);
 	}
 	return (s);
 }

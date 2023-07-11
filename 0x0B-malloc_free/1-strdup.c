@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * _strdup - function that returns a pointer that contains a copy of string
  * @str: a pointer to string to be copied

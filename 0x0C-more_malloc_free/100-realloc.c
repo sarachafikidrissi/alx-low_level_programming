@@ -11,27 +11,31 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *ptra;
+	char *new_loc, *ptra;
+	unsigned int i = 0;
 
 	ptr = malloc(old_size);
-	ptra = malloc(new_size);
 
 	if (new_size == old_size)
 		return (ptr);
 	else if (ptr == NULL)
-		return (ptra);
+	{
+		ptr = malloc(new_size);
+		if (ptr == NULL)
+			return (NULL);
+		return (ptr);
+	}
 	else if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	else
-	{
-		ptra = malloc(new_size);
-		if (ptr == NULL)
-			return (NULL);
-
-		memcpy(ptra, ptr, old_size);
-	}
-	return (ptra);
+	new_loc = malloc(new_size);
+	ptra = ptr;
+	if (old_size > new_size)
+		old_size = new_size;
+	for (i = 0; i < old_size; i++)
+		new_loc[i] = ptra[i];
+	free(ptr);
+	return (new_loc);
 }

@@ -15,6 +15,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *cpyname;
 	char *cpyowner;
 
+	if (name == NULL || owner == NULL)
+		return (NULL);
+
 	while (name[lenname])
 		lenname++;
 	while (owner[lenowner])

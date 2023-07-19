@@ -10,12 +10,19 @@
  */
 int main(int argc, char *argv[])
 {
+	int a, b;
 	int (*fptr)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error");
 		exit(98);
+	}
+
+	if (argv[2][1])
+	{
+		printf("Error");
+		exit(99);
 	}
 
 	fptr = get_op_func(argv[2]);
@@ -26,6 +33,9 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	printf("%d\n", fptr(atoi(argv[1]), atoi(argv[3])));
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	printf("%d\n", fptr(a, b));
 	return (0);
 }

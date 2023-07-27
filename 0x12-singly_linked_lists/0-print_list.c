@@ -9,20 +9,17 @@ size_t print_list(const list_t *h)
 {
 	unsigned int count = 0;
 
-	const list_t *temp;
-
-	temp = h;
-
-	while (temp != 0)
+	while (h)
 	{
-		if (temp->str == NULL)
-			printf("[0] (nil)\n");
+		printf("[%u]", h->len);
+		if (h->str == NULL)
+			printf("(nil)\n");
 
 		else
-			printf("[%u] %s\n", temp->len, temp->str);
+			printf("%s\n", h->str);
 
+		h = h->next;
 		count++;
-		temp = temp->next;
 	}
 	return (count);
 }

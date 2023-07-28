@@ -1,6 +1,7 @@
 section .data
 	fmt db "Hello, Holberton", 10, 0
-section.text
+
+section.text:
 extern printf
 
 global main

@@ -3,7 +3,9 @@
 #include <stddef.h>
 
 /**
- * 
+ * pripnt_listint - a function that prints the elements of a node
+ * @h: a pointer to the first node
+ * Return: number of node
 */
 size_t print_listint(const listint_t *h)
 {

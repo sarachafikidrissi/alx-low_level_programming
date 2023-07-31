@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stddef.h>
+#include <stdlib.h>
 
 /**
  * pripnt_listint - a function that prints the elements of a node
@@ -9,9 +10,10 @@
 */
 size_t print_listint(const listint_t *h)
 {
-	unsigned int count = 0;
+	size_t count = 0:
 
 	const listint_t *temp;
+
 	temp = h;
 
 	while (temp != 0)

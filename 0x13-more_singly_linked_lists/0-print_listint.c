@@ -1,7 +1,5 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stddef.h>
-#include <stdlib.h>
+
 
 /**
  * pripnt_listint - a function that prints the elements of a node
@@ -10,16 +8,12 @@
 */
 size_t print_listint(const listint_t *h)
 {
-	size_t count = 0:
+	size_t count = 0;
 
-	const listint_t *temp;
-
-	temp = h;
-
-	while (temp != 0)
+	while (h)
 	{
-		printf("%d", temp->n);
-		temp = temp->next;
+		printf("%d\n", h->n);
+		h = h->next;
 		count++;
 	}
 	return (count);

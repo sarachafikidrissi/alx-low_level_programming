@@ -2,19 +2,17 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-int pop_listint(listint_t **head)
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *new_node;
-	int n;
-
-	if (*head == NULL)
-		return (0);
-
-	n = (*head)->n;
-	new_node = (*head)->next;
-	free(*head);
-	*head = new_node;
-	return (n);
+    listint_t *temp;
+    int i = 1;
+    temp = head;
+    while (i <= index)
+    {
+        temp = temp->next;
+        i++;
+    }
+    return (temp);
 }
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
@@ -77,7 +75,7 @@ void free_listint2(listint_t **head)
 int main(void)
 {
     listint_t *head;
-    int n;
+    listint_t *node;
 
     head = NULL;
     add_nodeint_end(&head, 0);
@@ -89,13 +87,9 @@ int main(void)
     add_nodeint_end(&head, 402);
     add_nodeint_end(&head, 1024);
     print_listint(head);
-    n = pop_listint(&head);
-    printf("- %d\n", n);
-    print_listint(head);
-    n = pop_listint(&head);
-    printf("- %d\n", n);
+    node = get_nodeint_at_index(head, 5);
+    printf("%d\n", node->n);
     print_listint(head);
     free_listint2(&head);
-    printf("%p\n", (void *)head);
     return (0);
 }

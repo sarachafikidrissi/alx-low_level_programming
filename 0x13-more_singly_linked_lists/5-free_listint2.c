@@ -1,13 +1,16 @@
 #include "lists.h"
 /**
- * free_loistint2 - a function that frees a listint_t list and
+ * free_listint2 - a function that frees a listint_t list and
  * sets the head to NULL
  * @head: a pointer to node
  * Return : Nothing
 */
 void free_listint2(listint_t **head)
 {
-    listint_t *temp, *next_node;
+	listint_t *temp, *next_node;
+
+	if (head == NULL)
+		return ;
 
 	temp = *head;
 
@@ -17,5 +20,5 @@ void free_listint2(listint_t **head)
 		free(temp);
 		temp = next_node;
 	}
-    *head = NULL;
+	*head = NULL;
 }

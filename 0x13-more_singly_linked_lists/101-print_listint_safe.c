@@ -9,9 +9,10 @@ size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *temp = head, *next_node = head;
 	size_t count = 0;
+
 	if (head == NULL)
 		exit(98);
-	
+
 	while (temp && next_node && next_node->next && head)
 	{
 		temp = temp->next;
@@ -29,4 +30,3 @@ size_t print_listint_safe(const listint_t *head)
 	head = NULL;
 	return (count);
 }
-

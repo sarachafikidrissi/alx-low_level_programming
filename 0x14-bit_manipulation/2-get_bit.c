@@ -12,7 +12,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int mask = 1 << index;
 	unsigned int bits = sizeof(n);
 
-	if (index > bits)
+	if (index >= bits)
 		return (-1);
 
 	if (n & mask)

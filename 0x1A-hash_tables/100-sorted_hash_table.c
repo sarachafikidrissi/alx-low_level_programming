@@ -1,9 +1,13 @@
-#include "hash_tables.h"
+#include "shash_tables.h"
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 
-
+/**
+ * shash_table_create - A function that creates a hash table
+ * @size: the size of hash table
+ * Return: a pointer to the created hash table, NULL otherwise
+ */
 shash_table_t *shash_table_create(unsigned long int size)
 {
 	unsigned long int i = 0;
@@ -24,7 +28,13 @@ shash_table_t *shash_table_create(unsigned long int size)
 	return (new_table);
 }
 
-
+/**
+ * shash_table_set - A function that sets a key value pair to a hash table
+ * @key: the key to set
+ * @value: the value to set
+ * @ht: the hash table
+ * Return: 1 on success, 0 otherwise
+ */
 
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
@@ -71,7 +81,12 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
 
 
-
+/**
+ * shash_table_get - A function that gets the value associated to a key
+ * @ht: the hash table
+ * @key: the key associated to the value
+ * Return: the value, NULL if key not found
+ */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 	unsigned long int index = 0;
@@ -97,7 +112,10 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	return (value);
 }
 
-
+/**
+ * shash_table_print - A function that prints the content of a hash table
+ * @ht: the hash table to be printed
+ */
 void shash_table_print(const shash_table_t *ht)
 {
 	unsigned long int i = 0, last_pos = 0;
@@ -130,7 +148,11 @@ void shash_table_print(const shash_table_t *ht)
 	printf("}\n");
 }
 
-
+/**
+ * shash_table_delete - A function that deletes a hash table.
+ * @ht: thet hash table to be deletes
+ * Return: Nothing
+ */
 void shash_table_delete(shash_table_t *ht)
 {
 	unsigned long int i = 0;

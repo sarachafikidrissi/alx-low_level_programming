@@ -149,6 +149,35 @@ void shash_table_print(const shash_table_t *ht)
 }
 
 /**
+ * shash_table_print_rev - prints the keys and values of the shash table
+ * in reverse
+ * @ht: pointer to the shash table
+ * Return: nothing
+ */
+void shash_table_print_rev(const shash_table_t *ht)
+{
+	shash_node_t *tmp;
+	char *sep;
+
+	if (ht == NULL)
+		return;
+
+	printf("{");
+	sep = "";
+
+	tmp = ht->stail;
+
+	while (tmp != NULL)
+	{
+		printf("%s'%s': '%s'", sep, tmp->key, tmp->value);
+		sep = ", ";
+		tmp = tmp->sprev;
+	}
+
+	printf("}\n");
+}
+
+/**
  * shash_table_delete - A function that deletes a hash table.
  * @ht: thet hash table to be deletes
  * Return: Nothing
